@@ -118,8 +118,8 @@ export function Testimonials() {
                   ))}
                 </div>
                 {/* Logo */}
-                <div className="w-16 h-16 rounded-full bg-white p-2 flex items-center justify-center overflow-hidden shrink-0 opacity-90 group-hover:opacity-100 transition-opacity">
-                  <img src={t.logo} alt={t.company} className="max-w-full max-h-full object-contain" />
+                <div className="w-16 h-16 rounded-full bg-white p-1 flex items-center justify-center overflow-hidden shrink-0 opacity-90 group-hover:opacity-100 transition-opacity">
+                  <img src={t.logo} alt={t.company} className="w-full h-full object-cover" />
                 </div>
               </div>
              
