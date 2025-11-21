@@ -1,5 +1,18 @@
-import { Star } from "lucide-react";
+import { Star, CheckCircle2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+
+function getRandomTimeframe() {
+  const timeframes = [
+    "2 weeks ago",
+    "1 month ago",
+    "2 months ago",
+    "3 months ago",
+    "4 months ago",
+    "5 months ago",
+    "6 months ago"
+  ];
+  return timeframes[Math.floor(Math.random() * timeframes.length)];
+}
 
 const testimonials = [
   {
@@ -94,9 +107,16 @@ export function Testimonials() {
       <div className="container mx-auto px-4 mb-16 text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Real Results</h2>
-          <p className="text-xl text-gray-400">
+          <p className="text-xl text-gray-400 mb-6">
             Hear from pressure washing owners just like you who are no longer stuck in the "Technician's Trap."
           </p>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
+            <div className="flex items-center gap-1.5">
+              <span className="text-white font-bold text-lg">4.8</span>
+              <span className="text-gray-400 text-sm">on</span>
+              <span className="text-orange-500 font-bold">TrustPilot</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -108,10 +128,24 @@ export function Testimonials() {
               key={i} 
               className="w-[400px] shrink-0 bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-colors group flex flex-col h-full"
             >
-              <div className="flex items-start mb-6">
+              <div className="flex items-start gap-4 mb-6">
                 {/* Logo */}
-                <div className="w-16 h-16 rounded-full bg-white p-1 flex items-center justify-center overflow-hidden shrink-0 opacity-90 group-hover:opacity-100 transition-opacity mr-auto">
+                <div className="w-16 h-16 rounded-full bg-white p-1 flex items-center justify-center overflow-hidden shrink-0 opacity-90 group-hover:opacity-100 transition-opacity">
                   <img src={t.logo} alt={t.company} className="w-full h-full object-cover scale-125" />
+                </div>
+                
+                {/* Company name and stars */}
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-2">
+                    <h4 className="font-bold text-white">{t.company}</h4>
+                    <CheckCircle2 className="w-4 h-4 text-blue-500 fill-blue-500" />
+                  </div>
+                  <div className="flex items-center gap-1 mb-1">
+                    {[1,2,3,4,5].map((star) => (
+                      <Star key={star} className="w-3.5 h-3.5 text-yellow-500 fill-yellow-500" />
+                    ))}
+                  </div>
+                  <p className="text-xs text-gray-500">{getRandomTimeframe()}</p>
                 </div>
               </div>
              
@@ -133,7 +167,7 @@ export function Testimonials() {
                 </div>
                 <div>
                   <h4 className="font-bold text-white leading-tight">{t.name}</h4>
-                  <p className="text-sm text-gray-500">{t.company}</p>
+                  <p className="text-sm text-gray-500">Business Owner</p>
                 </div>
               </div>
             </div>
