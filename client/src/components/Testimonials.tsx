@@ -1,4 +1,4 @@
-import { Star, CheckCircle2 } from "lucide-react";
+import { Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 function getRandomTimeframe() {
@@ -111,10 +111,16 @@ export function Testimonials() {
             Hear from pressure washing owners just like you who are no longer stuck in the "Technician's Trap."
           </p>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-2">
               <span className="text-white font-bold text-lg">4.8</span>
-              <span className="text-gray-400 text-sm">on</span>
-              <span className="text-orange-500 font-bold">TrustPilot</span>
+              <span className="text-gray-400 text-sm">•</span>
+              <span className="text-gray-400 text-sm">20+ reviews on</span>
+              <div className="flex items-center gap-1">
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path className="fill-green-500" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <span className="text-gray-400 text-xs font-semibold">Trustpilot</span>
+              </div>
             </div>
           </div>
         </div>
@@ -138,7 +144,11 @@ export function Testimonials() {
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
                     <h4 className="font-bold text-white">{t.company}</h4>
-                    <CheckCircle2 className="w-4 h-4 text-blue-500 fill-blue-500" />
+                    <div className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
                   </div>
                   <div className="flex items-center gap-1 mb-1">
                     {[1,2,3,4,5].map((star) => (
