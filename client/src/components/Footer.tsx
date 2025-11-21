@@ -2,11 +2,11 @@ import { Link } from "wouter";
 
 export function Footer() {
   return (
-    <footer className="bg-background border-t border-white/5 pt-20 pb-10 text-gray-400">
+    <footer className="bg-background border-t border-white/5 pb-10 text-gray-400">
       <div className="container mx-auto px-4 text-center">
         
-        <div className="flex flex-col items-center mb-12">
-          <img src="/logo.png" alt="Introscale" className="h-12 w-auto mb-8" />
+        <div className="flex flex-col items-center py-4">
+          <img src="/logo.png" alt="Introscale" className="h-12 w-auto" />
         </div>
 
         <div className="border-t border-white/5 pt-8 text-sm text-gray-600 flex flex-col items-center gap-6">
