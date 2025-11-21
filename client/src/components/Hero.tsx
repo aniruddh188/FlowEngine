@@ -61,7 +61,7 @@ export function Hero() {
               </Button>
             </div>
             
-            <div className="mt-16 pt-8 border-t border-white/5 grid grid-cols-2 md:grid-cols-3 gap-8 opacity-60 max-w-3xl mx-auto">
+            <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-center gap-8 md:gap-16 opacity-60 max-w-3xl mx-auto">
               <div>
                 <div className="text-2xl font-bold text-white">30 Days</div>
                 <div className="text-sm text-gray-500">Timeframe</div>

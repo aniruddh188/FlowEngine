@@ -10,7 +10,7 @@ export function Guarantee() {
   };
 
   return (
-    <section className="py-20 border-t border-white/5">
+    <section className="py-16 border-t border-white/5">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto bg-gradient-to-b from-white/10 to-white/5 rounded-[3rem] p-1 border border-white/10">
           <div className="bg-[#0f0f11] rounded-[2.8rem] p-8 md:p-20 text-center relative overflow-hidden">

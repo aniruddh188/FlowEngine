@@ -106,7 +106,7 @@
 
 @layer utilities {
   .animate-scroll {
-    animation: scroll 40s linear infinite;
+    animation: scroll 80s linear infinite;
   }
   .mask-gradient {
     mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);

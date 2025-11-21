@@ -90,19 +90,15 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="py-32 bg-background relative overflow-hidden">
-      <div className="container mx-auto px-4 mb-16">
-        <div className="flex flex-col md:flex-row justify-between items-end gap-8">
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Real Results</h2>
-            <p className="text-xl text-gray-400 max-w-xl">
-              Hear from pressure washing owners just like you who are no longer stuck in the "Technician's Trap."
-            </p>
-          </div>
-          <div className="flex gap-2">
-            <div className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-sm font-medium">
-              4.9/5 Average Rating
-            </div>
+    <section id="testimonials" className="py-20 bg-background relative overflow-hidden">
+      <div className="container mx-auto px-4 mb-16 text-center">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Real Results</h2>
+          <p className="text-xl text-gray-400 mb-6">
+            Hear from pressure washing owners just like you who are no longer stuck in the "Technician's Trap."
+          </p>
+          <div className="inline-flex px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-sm font-medium">
+            4.9/5 Average Rating
           </div>
         </div>
       </div>
@@ -122,8 +118,8 @@ export function Testimonials() {
                   ))}
                 </div>
                 {/* Logo */}
-                <div className="h-12 w-32 flex items-center justify-end opacity-80 grayscale group-hover:grayscale-0 transition-all">
-                  <img src={t.logo} alt={t.company} className="max-h-full max-w-full object-contain" />
+                <div className="w-16 h-16 rounded-full bg-white p-2 flex items-center justify-center overflow-hidden shrink-0 opacity-90 group-hover:opacity-100 transition-opacity">
+                  <img src={t.logo} alt={t.company} className="max-w-full max-h-full object-contain" />
                 </div>
               </div>
              

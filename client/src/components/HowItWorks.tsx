@@ -25,7 +25,7 @@ export function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="py-32 bg-black relative overflow-hidden">
+    <section id="how-it-works" className="py-20 bg-black relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">The Introscale Engine</h2>
