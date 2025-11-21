@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export function ProblemSolution() {
   return (
-    <section id="problem" className="py-12 md:py-20 bg-background relative">
+    <section id="problem" className="bg-background relative pt-0 pb-12 md:pb-20">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
