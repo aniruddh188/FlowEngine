@@ -7,9 +7,6 @@ export function Footer() {
         
         <div className="flex flex-col items-center mb-12">
           <img src="/logo.png" alt="Introscale" className="h-12 w-auto mb-8" />
-          <p className="max-w-sm leading-relaxed text-gray-500 mb-8">
-            We help pressure washing businesses scale with predictable job flow. Stop chasing leads and start booking jobs.
-          </p>
         </div>
 
         <div className="border-t border-white/5 pt-8 text-sm text-gray-600 flex flex-col items-center gap-6">
