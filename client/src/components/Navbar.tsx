@@ -47,8 +47,7 @@ export function Navbar() {
       scrolled ? "bg-background/80 backdrop-blur-md border-white/10 py-4" : "bg-transparent py-6"
     )}>
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <button onClick={scrollToHome} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-          <img src="/logo.png" alt="Introscale" className="h-8 w-auto" />
+        <button onClick={scrollToHome} className="hover:opacity-80 transition-opacity">
           <span className="font-heading text-2xl font-bold tracking-tight text-white">INTROSCALE</span>
         </button>
 
