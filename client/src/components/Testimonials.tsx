@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const testimonials = [
   {
@@ -89,9 +90,9 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="py-32 bg-background relative">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+    <section id="testimonials" className="py-32 bg-background relative overflow-hidden">
+      <div className="container mx-auto px-4 mb-16">
+        <div className="flex flex-col md:flex-row justify-between items-end gap-8">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Real Results</h2>
             <p className="text-xl text-gray-400 max-w-xl">
@@ -104,10 +105,16 @@ export function Testimonials() {
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((t, i) => (
-            <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-colors group flex flex-col h-full">
+      {/* Infinite Scroll Marquee */}
+      <div className="flex overflow-hidden select-none mask-gradient">
+        <div className="flex animate-scroll gap-6 py-4 px-4">
+          {[...testimonials, ...testimonials].map((t, i) => (
+            <div 
+              key={i} 
+              className="w-[400px] shrink-0 bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-colors group flex flex-col h-full"
+            >
               <div className="flex justify-between items-start mb-6">
                  <div className="flex gap-1">
                   {[1,2,3,4,5].map((star) => (
