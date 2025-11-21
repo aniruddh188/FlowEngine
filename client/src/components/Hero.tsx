@@ -12,7 +12,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center md:pt-20 overflow-hidden">
       {/* Background Image with Heavy Overlay for Dark Theme */}
       <div className="absolute inset-0 z-0">
         <img 
