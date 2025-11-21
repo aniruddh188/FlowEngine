@@ -60,15 +60,13 @@ export function Hero() {
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               
-              <div className="flex flex-col items-center md:items-start gap-2">
-                <div className="flex items-center gap-2">
-                  <span className="text-white font-semibold">20+ owners trust us</span>
-                  <div className="flex gap-0.5">
-                    {[1,2,3,4,5].map((star) => (
-                      <Star key={star} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                    ))}
-                  </div>
+              <div className="flex flex-col items-center md:items-start gap-1">
+                <div className="flex gap-0.5">
+                  {[1,2,3,4,5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+                  ))}
                 </div>
+                <span className="text-white font-semibold">20+ owners trust us</span>
               </div>
             </div>
           </motion.div>
