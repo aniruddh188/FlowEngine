@@ -3,10 +3,12 @@ import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { useLocation } from "wouter";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [, setLocation] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +26,12 @@ export function Navbar() {
     }
   };
 
+  const scrollToHome = () => {
+    setLocation('/');
+    setIsOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const NavItems = () => (
     <>
       <a href="#problem" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">The Problem</a>
@@ -39,9 +47,10 @@ export function Navbar() {
       scrolled ? "bg-background/80 backdrop-blur-md border-white/10 py-4" : "bg-transparent py-6"
     )}>
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
+        <button onClick={scrollToHome} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <img src="/logo.png" alt="Introscale" className="h-8 w-auto" />
           <span className="font-heading text-2xl font-bold tracking-tight text-white">INTROSCALE</span>
-        </div>
+        </button>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
