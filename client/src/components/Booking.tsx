@@ -63,7 +63,7 @@ export function Booking() {
             Ready to Fill Your Calendar?
           </h2>
           <p className="text-xl text-gray-400">
-            Book your free 15-minute demo call to see how we guarantee 15+ booked appointments.
+            Book your free 30 min growth call to see how we can fill your calendar.
           </p>
         </div>
         
