@@ -6,7 +6,7 @@ export function Footer() {
       <div className="container mx-auto px-4 text-center">
         
         <div className="flex flex-col items-center mb-12">
-          <span className="font-heading text-2xl font-bold text-white tracking-tight mb-6">INTROSCALE</span>
+          <img src="/logo.png" alt="Introscale" className="h-12 w-auto mb-8" />
           <p className="max-w-sm leading-relaxed text-gray-500 mb-8">
             We help pressure washing businesses scale with predictable job flow. Stop chasing leads and start booking jobs.
           </p>

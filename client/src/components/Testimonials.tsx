@@ -121,8 +121,10 @@ export function Testimonials() {
                     <Star key={star} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
                   ))}
                 </div>
-                {/* Placeholder for logo if it existed */}
-                <div className="h-6 w-20 bg-white/10 rounded opacity-50"></div>
+                {/* Logo */}
+                <div className="h-12 w-32 flex items-center justify-end opacity-80 grayscale group-hover:grayscale-0 transition-all">
+                  <img src={t.logo} alt={t.company} className="max-h-full max-w-full object-contain" />
+                </div>
               </div>
              
               <p className="text-gray-300 mb-8 leading-relaxed text-lg italic flex-grow">"{t.review}"</p>

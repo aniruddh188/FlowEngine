@@ -40,7 +40,7 @@ export function Navbar() {
     )}>
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="font-heading text-2xl font-bold tracking-tight text-white">INTROSCALE</span>
+          <img src="/logo.png" alt="Introscale" className="h-8 w-auto" />
         </div>
 
         {/* Desktop Nav */}
