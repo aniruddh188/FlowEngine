@@ -1,41 +1,89 @@
-import { Star, Quote } from "lucide-react";
+import { Star } from "lucide-react";
 
 const testimonials = [
   {
     name: "David Martinez",
     company: "BrightClean Exteriors",
-    review: "Our revenue increased by over $6,000 in the first month. The ROI is a no-brainer.",
-    image: "https://i.pravatar.cc/150?u=david"
+    review: "Our revenue increased by over $6,000 in the first month from the jobs Introscale sent us. The ROI is a no-brainer.",
+    image: "/owner1.png",
+    logo: "/brightclean-exteriors.png"
   },
   {
     name: "Michael Roberts",
     company: "Spotless Exterior",
-    review: "We went from unpredictable referrals to 18 high-quality booked jobs in just 4 weeks.",
-    image: "https://i.pravatar.cc/150?u=michael"
+    review: "We went from unpredictable referrals to 18 high-quality booked jobs in just 4 weeks. The system just works.",
+    image: "/owner2.png",
+    logo: "/spotless-exterior.png"
   },
   {
     name: "Matthew Lewis",
     company: "Crystal Clean Wash",
-    review: "We're getting high-ticket clients who are ready to buy, not price shoppers.",
-    image: "https://i.pravatar.cc/150?u=matthew"
+    review: "The quality of the jobs is what impressed me most. We're getting high-ticket clients who are ready to buy, not price shoppers.",
+    image: "/owner3.png",
+    logo: "/crystal-clean-wash.png"
   },
   {
     name: "Kevin Peterson",
     company: "ProShine Services",
-    review: "I've gotten back 10+ hours a week because I no longer have to chase dead-end leads.",
-    image: "https://i.pravatar.cc/150?u=kevin"
+    review: "I've gotten back 10+ hours a week because I no longer have to chase dead-end leads. I just wake up to confirmed bookings.",
+    image: "/owner4.png",
+    logo: "/proshine-services.png"
   },
   {
     name: "Jacob Phillips",
     company: "Diamond Clean",
-    review: "Having a consistent $5,000+ in extra revenue each month has brought financial stability.",
-    image: "https://i.pravatar.cc/150?u=jacob"
+    review: "The feast-or-famine cycle is over. Having a consistent $5,000+ in extra revenue each month has brought incredible financial stability to my business.",
+    image: "/owner5.png",
+    logo: "/diamond-clean.png"
   },
   {
     name: "Johnathan Miller",
     company: "CleanPro Washers",
-    review: "It's like having a marketing team that handles everything for you.",
-    image: "https://i.pravatar.cc/150?u=john"
+    review: "Within 4 weeks, Introscale booked 16 new Appointments directly into my calendar. It's like having a marketing team that handles everything for you.",
+    image: "/owner6.png",
+    logo: "/cleanpro-washers.png"
+  },
+  {
+    name: "Alex Rodriguez",
+    company: "ShinePro Cleaning",
+    review: "The consistent flow of jobs gave us the revenue to hire another technician and buy a second rig. We're finally scaling.",
+    image: "/owner7.png",
+    logo: "/shinepro-cleaning.png"
+  },
+  {
+    name: "Oliver James",
+    company: "FreshStart Power Wash",
+    review: "I was a one-man show, but the 18 jobs we got last month meant I could finally hire my first employee. We're growing faster than I ever thought possible.",
+    image: "/owner8.png",
+    logo: "/freshstart-power-wash.png"
+  },
+  {
+    name: "David Chen",
+    company: "Sparkle Wash Pros",
+    review: "The best part is the predictability. I know my schedule will be full every month, which has completely removed the stress of running my business.",
+    image: "/owner9.png",
+    logo: "/sparkle-wash-pros.png"
+  },
+  {
+    name: "Ethan Thomas",
+    company: "Fresh Wash Co.",
+    review: "I was skeptical of the promise, but we got 19 booked appointments in the first 30 days. This is the real deal.",
+    image: "/owner10.png",
+    logo: "/fresh-wash-co.png"
+  },
+  {
+    name: "Samuel Peterson",
+    company: "Pristine Power Wash",
+    review: "The process is completely hands-off. We got 12 new clients in the first month without lifting a finger. A total game changer for our business.",
+    image: "/owner11.png",
+    logo: "/pristine-power-wash.png"
+  },
+  {
+    name: "Daniel White",
+    company: "AquaBlast Exteriors",
+    review: "It's the definition of 'done for you.' We don't see leads or make calls. We just see confirmed appointments appear on our calendar.",
+    image: "/owner12.png",
+    logo: "/aquablast-exteriors.png"
   }
 ];
 
@@ -59,22 +107,35 @@ export function Testimonials() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
-            <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-colors group">
-              <div className="flex gap-1 mb-6">
-                {[1,2,3,4,5].map((star) => (
-                  <Star key={star} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                ))}
+            <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-colors group flex flex-col h-full">
+              <div className="flex justify-between items-start mb-6">
+                 <div className="flex gap-1">
+                  {[1,2,3,4,5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+                  ))}
+                </div>
+                {/* Placeholder for logo if it existed */}
+                <div className="h-6 w-20 bg-white/10 rounded opacity-50"></div>
               </div>
-              <p className="text-gray-300 mb-8 leading-relaxed text-lg">"{t.review}"</p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gray-700 overflow-hidden border border-white/10">
-                  {/* Using a placeholder avatar service if image fails, or initials */}
-                  <div className="w-full h-full bg-gradient-to-br from-gray-700 to-gray-600 flex items-center justify-center text-white font-bold">
-                    {t.name[0]}
-                  </div>
+             
+              <p className="text-gray-300 mb-8 leading-relaxed text-lg italic flex-grow">"{t.review}"</p>
+              
+              <div className="flex items-center gap-4 mt-auto pt-6 border-t border-white/5">
+                <div className="w-12 h-12 rounded-full bg-gray-700 overflow-hidden border border-white/10 shrink-0">
+                  <img 
+                    src={t.image} 
+                    alt={t.name} 
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // Fallback if image not found
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.parentElement!.classList.add('flex', 'items-center', 'justify-center');
+                      e.currentTarget.parentElement!.innerHTML = `<span class="text-white font-bold">${t.name[0]}</span>`;
+                    }}
+                  />
                 </div>
                 <div>
-                  <h4 className="font-bold text-white">{t.name}</h4>
+                  <h4 className="font-bold text-white leading-tight">{t.name}</h4>
                   <p className="text-sm text-gray-500">{t.company}</p>
                 </div>
               </div>

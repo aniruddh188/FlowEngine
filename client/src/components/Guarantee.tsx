@@ -2,6 +2,13 @@ import { ShieldCheck, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Guarantee() {
+  const scrollToBooking = () => {
+    const bookingSection = document.getElementById('booking-section');
+    if (bookingSection) {
+      bookingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="py-20 border-t border-white/5">
       <div className="container mx-auto px-4">
@@ -26,7 +33,10 @@ export function Guarantee() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-              <Button className="bg-white text-black hover:bg-gray-200 text-lg px-10 py-7 rounded-full font-medium w-full sm:w-auto shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+              <Button 
+                onClick={scrollToBooking}
+                className="bg-white text-black hover:bg-gray-200 text-lg px-10 py-7 rounded-full font-medium w-full sm:w-auto shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+              >
                 Claim Your Strategy Call
               </Button>
             </div>

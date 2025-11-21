@@ -1,4 +1,4 @@
-import { AlertTriangle, CheckCircle2, ArrowRight, TrendingUp, Clock, DollarSign } from "lucide-react";
+import { AlertTriangle, TrendingUp, Clock, DollarSign } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export function ProblemSolution() {
@@ -66,7 +66,7 @@ export function ProblemSolution() {
               <div className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 text-white flex items-center justify-between">
                 <div>
                   <h4 className="font-bold text-lg">0% Risk Guarantee</h4>
-                  <p className="text-white/80 text-sm">We hit our numbers or you don't pay.</p>
+                  <p className="text-white/80 text-sm">We hit our numbers or you get your money back.</p>
                 </div>
                 <DollarSign className="w-8 h-8 text-white/80" />
               </div>

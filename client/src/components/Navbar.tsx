@@ -16,6 +16,14 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToBooking = () => {
+    const bookingSection = document.getElementById('booking-section');
+    if (bookingSection) {
+      bookingSection.scrollIntoView({ behavior: 'smooth' });
+      setIsOpen(false);
+    }
+  };
+
   const NavItems = () => (
     <>
       <a href="#problem" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">The Problem</a>
@@ -38,7 +46,10 @@ export function Navbar() {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           <NavItems />
-          <Button className="bg-white text-black hover:bg-gray-200 rounded-full px-6 font-medium">
+          <Button 
+            onClick={scrollToBooking}
+            className="bg-white text-black hover:bg-gray-200 rounded-full px-6 font-medium"
+          >
             Book Strategy Call
           </Button>
         </div>
@@ -54,7 +65,10 @@ export function Navbar() {
             <SheetContent className="bg-background border-l-white/10 text-white">
               <div className="flex flex-col gap-6 mt-10">
                 <NavItems />
-                <Button className="bg-white text-black hover:bg-gray-200 rounded-full w-full">
+                <Button 
+                  onClick={scrollToBooking}
+                  className="bg-white text-black hover:bg-gray-200 rounded-full w-full"
+                >
                   Book Strategy Call
                 </Button>
               </div>

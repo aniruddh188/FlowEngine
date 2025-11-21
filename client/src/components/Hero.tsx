@@ -1,9 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, PlayCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import heroBg from "@assets/generated_images/professional_pressure_washing_action_shot_for_hero_section.png";
 
 export function Hero() {
+  const scrollToBooking = () => {
+    const bookingSection = document.getElementById('booking-section');
+    if (bookingSection) {
+      bookingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Image with Heavy Overlay for Dark Theme */}
@@ -45,18 +52,16 @@ export function Hero() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button className="bg-white text-black hover:bg-gray-200 text-lg px-8 py-7 rounded-full font-medium shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all group">
+              <Button 
+                onClick={scrollToBooking}
+                className="bg-white text-black hover:bg-gray-200 text-lg px-8 py-7 rounded-full font-medium shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all group"
+              >
                 Book Strategy Call
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 text-lg px-8 py-7 rounded-full font-medium">
-                <PlayCircle className="w-5 h-5 mr-2" />
-                How It Works
-              </Button>
             </div>
             
-            <div className="mt-16 pt-8 border-t border-white/5 grid grid-cols-2 md:grid-cols-4 gap-8 opacity-60">
-              {/* Simple stats or logos could go here */}
+            <div className="mt-16 pt-8 border-t border-white/5 grid grid-cols-2 md:grid-cols-3 gap-8 opacity-60 max-w-3xl mx-auto">
               <div>
                 <div className="text-2xl font-bold text-white">30 Days</div>
                 <div className="text-sm text-gray-500">Timeframe</div>
@@ -64,10 +69,6 @@ export function Hero() {
               <div>
                 <div className="text-2xl font-bold text-white">0% Risk</div>
                 <div className="text-sm text-gray-500">Guarantee</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-white">15+</div>
-                <div className="text-sm text-gray-500">Appointments</div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-white">24/7</div>
