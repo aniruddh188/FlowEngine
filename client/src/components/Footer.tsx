@@ -14,6 +14,7 @@ export function Footer() {
 
         <div className="border-t border-white/5 pt-8 text-sm text-gray-600 flex flex-col items-center gap-6">
           <div className="flex gap-6 flex-wrap justify-center">
+            <Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link>
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link>
             <Link href="/refund-policy" className="hover:text-white transition-colors">Refund Policy</Link>

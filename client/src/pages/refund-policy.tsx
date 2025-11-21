@@ -7,37 +7,48 @@ export default function RefundPolicy() {
       <Navbar />
       <main className="container mx-auto px-4 pt-32 pb-20 max-w-4xl">
         <h1 className="text-4xl font-bold text-white mb-8">Refund & Cancellation Policy</h1>
-        <p className="mb-4 text-sm text-gray-500">Last Updated: November 21, 2025</p>
+        <p className="mb-4 text-sm text-gray-500">Last Updated: November 4, 2025</p>
         
         <div className="space-y-6">
           <section>
-            <h2 className="text-2xl font-bold text-white mb-4">1. Performance Guarantee</h2>
-            <p>At Introscale, we stand behind our service with a strict performance guarantee. Our "0% Risk Guarantee" states that if we do not deliver the promised number of booked estimates within the agreed-upon timeframe (typically 30 days), you are eligible for a full refund of your service fee.</p>
+            <h2 className="text-2xl font-bold text-white mb-4">1. Overview</h2>
+            <p>At Introscale, we are committed to delivering high-quality, performance-based digital marketing services. This Refund & Cancellation Policy outlines the terms under which you may request a refund or cancel your subscription.</p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-white mb-4">2. Refund Eligibility</h2>
-            <p>To be eligible for a refund under our performance guarantee:</p>
+            <p>Refunds are applicable only under the following circumstances:</p>
             <ul className="list-disc pl-6 mt-2 space-y-2">
-              <li>You must have onboarded and launched the system as instructed.</li>
-              <li>You must have attended scheduled check-in calls.</li>
-              <li>You must have responded to leads/appointments in a timely manner as per our training.</li>
+              <li>If we fail to deliver the number of qualified, booked appointments as outlined in your service agreement.</li>
+              <li>If a duplicate payment was made due to a technical error.</li>
+              <li>If the service was purchased but never initiated due to internal reasons on our part.</li>
             </ul>
+            <p className="mt-2">Refunds are not applicable for partial service usage, client-side delays, or performance beyond our control.</p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-white mb-4">3. Cancellation</h2>
-            <p>You may cancel your service at any time. There are no long-term lock-in contracts. To cancel, simply notify us in writing at least 3 days before your next billing cycle to avoid being charged for the subsequent month.</p>
+            <h2 className="text-2xl font-bold text-white mb-4">3. Refund Process</h2>
+            <p>To request a refund, please email info@introscale.com with your campaign details and results summary. Once your request is verified, approved refunds will be processed within 7–10 business days to the original payment method.</p>
+            <p className="mt-2">Cancellations made before campaign launch are eligible for a full refund. Cancellations made after launch but before 30 days are not eligible, as the service is already in execution.</p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-white mb-4">4. Processing Refunds</h2>
-            <p>Approved refunds are processed within 5-7 business days and will be returned to the original payment method used. Banks may take additional time to reflect the transaction in your account.</p>
+            <h2 className="text-2xl font-bold text-white mb-4">4. Cancellation Policy</h2>
+            <p>Clients may cancel their service subscription with a 30-day written notice before the next billing cycle. Cancellations made after renewal will take effect in the next cycle.</p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-white mb-4">5. Contact Us</h2>
-            <p>If you have any questions concerning our return policy, please contact us at: info@introscale.com</p>
+            <h2 className="text-2xl font-bold text-white mb-4">5. Exceptions</h2>
+            <p>No refunds will be issued once the guaranteed results have been achieved, or if campaign data shows leads were generated as per service commitments.</p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-white mb-4">6. Contact Us</h2>
+            <p>If you have any questions about our refund or cancellation process, please contact us at:</p>
+            <ul className="mt-2 space-y-1">
+              <li>Email: info@introscale.com</li>
+              <li>Phone: +1 415-941-3717 / +91 7016658905</li>
+            </ul>
           </section>
         </div>
       </main>
