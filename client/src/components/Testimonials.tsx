@@ -94,12 +94,9 @@ export function Testimonials() {
       <div className="container mx-auto px-4 mb-16 text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Real Results</h2>
-          <p className="text-xl text-gray-400 mb-6">
+          <p className="text-xl text-gray-400">
             Hear from pressure washing owners just like you who are no longer stuck in the "Technician's Trap."
           </p>
-          <div className="inline-flex px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-sm font-medium">
-            4.9/5 Average Rating
-          </div>
         </div>
       </div>
 
@@ -111,14 +108,9 @@ export function Testimonials() {
               key={i} 
               className="w-[400px] shrink-0 bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-colors group flex flex-col h-full"
             >
-              <div className="flex justify-between items-start mb-6">
-                 <div className="flex gap-1">
-                  {[1,2,3,4,5].map((star) => (
-                    <Star key={star} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                  ))}
-                </div>
+              <div className="flex items-start mb-6">
                 {/* Logo */}
-                <div className="w-16 h-16 rounded-full bg-white p-1 flex items-center justify-center overflow-hidden shrink-0 opacity-90 group-hover:opacity-100 transition-opacity">
+                <div className="w-16 h-16 rounded-full bg-white p-1 flex items-center justify-center overflow-hidden shrink-0 opacity-90 group-hover:opacity-100 transition-opacity mr-auto">
                   <img src={t.logo} alt={t.company} className="w-full h-full object-cover scale-125" />
                 </div>
               </div>
