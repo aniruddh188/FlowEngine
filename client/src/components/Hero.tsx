@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
 import heroBg from "@assets/generated_images/professional_pressure_washing_action_shot_for_hero_section.png";
 
 export function Hero() {
@@ -51,7 +51,7 @@ export function Hero() {
               We help pressure washing businesses get an extra predictable flow of qualified, booked estimates to their calendar within 30 days.
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
               <Button 
                 onClick={scrollToBooking}
                 className="bg-white text-black hover:bg-gray-200 text-lg px-8 py-7 rounded-full font-medium shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all group"
@@ -59,20 +59,16 @@ export function Hero() {
                 Book Strategy Call
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </div>
-            
-            <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-center gap-8 md:gap-16 opacity-60 max-w-3xl mx-auto">
-              <div>
-                <div className="text-2xl font-bold text-white">30 Days</div>
-                <div className="text-sm text-gray-500">Timeframe</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-white">0% Risk</div>
-                <div className="text-sm text-gray-500">Guarantee</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-white">24/7</div>
-                <div className="text-sm text-gray-500">Automation</div>
+              
+              <div className="flex flex-col items-center md:items-start gap-2">
+                <div className="flex items-center gap-2">
+                  <span className="text-white font-semibold">20+ owners trust us</span>
+                  <div className="flex gap-0.5">
+                    {[1,2,3,4,5].map((star) => (
+                      <Star key={star} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>
